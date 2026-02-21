@@ -20,7 +20,6 @@
     </ThingDef>
 
     <!-- apotheosis surgery -->
-
     <RecipeDef ParentName="SurgeryFlesh">
         <defName>HQC_ApotheosisSurgery</defName>
         <label>apotheosis surgery</label>
@@ -90,7 +89,6 @@
     </RecipeDef>
 
     <!-- divine brain -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineBrain</defName>
         <label>divine brain</label>
@@ -139,7 +137,6 @@
     </ThingDef>
 
     <!-- divine ear -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineEar</defName>
         <label>divine ear</label>
@@ -171,7 +168,6 @@
     </ThingDef>
 
     <!-- divine eye -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineEye</defName>
         <label>divine eye</label>
@@ -221,7 +217,6 @@
     </ThingDef>
 
     <!-- divine nose -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineNose</defName>
         <label>divine nose</label>
@@ -263,7 +258,6 @@
     </ThingDef>
 
     <!-- divine jaw -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineJaw</defName>
         <label>divine jaw</label>
@@ -307,7 +301,6 @@
     </ThingDef>
 
     <!-- divine heart -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineHeart</defName>
         <label>divine heart</label>
@@ -345,7 +338,6 @@
     </ThingDef>
 
     <!-- divine lung -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineLung</defName>
         <label>divine lung</label>
@@ -384,7 +376,6 @@
     </ThingDef>
 
     <!-- divine stomach -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineStomach</defName>
         <label>divine stomach</label>
@@ -422,7 +413,6 @@
     </ThingDef>
 
     <!-- divine kidney -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineKidney</defName>
         <label>divine kidney</label>
@@ -461,7 +451,6 @@
     </ThingDef>
 
     <!-- divine liver-->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineLiver</defName>
         <label>divine liver</label>
@@ -493,7 +482,6 @@
     </ThingDef>
 
     <!-- divine arm-->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineArm</defName>
         <label>divine arm</label>
@@ -536,7 +524,6 @@
     </ThingDef>
 
     <!-- divine spine -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineSpine</defName>
         <label>divine spine</label>
@@ -575,7 +562,6 @@
     </ThingDef>
 
     <!-- divine pelvis-->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivinePelvis</defName>
         <label>divine pelvis</label>
@@ -607,7 +593,6 @@
     </ThingDef>
 
     <!-- divine leg -->
-
     <HediffDef ParentName="AddedBodyPartBase">
         <defName>HQC_DivineLeg</defName>
         <label>divine leg</label>
@@ -649,7 +634,6 @@
     </ThingDef>
 
     <!-- divine skin -->
-
     <HediffDef>
         <defName>HQC_DivineSkin</defName>
         <hediffClass>Hediff</hediffClass>
@@ -660,7 +644,6 @@
         <descriptionHyperlinks>
             <ThingDef>HQC_DivineSkin</ThingDef>
         </descriptionHyperlinks>
-        <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
         <isBad>false</isBad>
         <priceImpact>true</priceImpact>
         <initialSeverity>1</initialSeverity>

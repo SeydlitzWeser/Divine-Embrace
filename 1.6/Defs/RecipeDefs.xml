@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- holy essence mining -->
+    <RecipeDef ParentName="DankPyon_MineShaftBase">
+        <defName>HQC_MineHolyEssence</defName>
+        <label>mine holy essence x5</label>
+        <description>Mine previously invisible holy essence veins.</description>
+        <workAmount>5000</workAmount>
+        <jobString>Mining 5 holy essence</jobString>
+        <targetCountAdjustment>5</targetCountAdjustment>
+        <recipeUsers>
+            <li>DankPyon_MineShaft</li>
+        </recipeUsers>
+        <products>
+            <HQC_HolyEssence>5</HQC_HolyEssence>
+        </products>
+        <researchPrerequisite>HQC_DivineRevelation</researchPrerequisite>
+    </RecipeDef>
+
+    <RecipeDef ParentName="DankPyon_MineShaftBase">
+        <defName>HQC_MineHolyEssenceBulk</defName>
+        <label>mine holy essence x25</label>
+        <description>Mine previously invisible holy essence veins.</description>
+        <workAmount>5000</workAmount>
+        <jobString>Mining 25 holy essence</jobString>
+        <targetCountAdjustment>25</targetCountAdjustment>
+        <recipeUsers>
+            <li>DankPyon_MineShaft</li>
+        </recipeUsers>
+        <products>
+            <HQC_HolyEssence>5</HQC_HolyEssence>
+        </products>
+        <researchPrerequisite>HQC_DivineRevelation</researchPrerequisite>
+    </RecipeDef>
+</Defs>

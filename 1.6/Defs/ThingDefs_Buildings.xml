@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+    <!-- sanctified scripture -->
     <ThingDef ParentName="BuildingBase">
         <defName>HQC_SanctifiedScripture</defName>
         <label>sanctified scripture</label>
@@ -50,5 +51,66 @@
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
         </placeWorkers>
+    </ThingDef>
+
+    <!-- sacred tools cabinet -->
+    <ThingDef ParentName="BuildingBase">
+        <defName>HQC_SacredToolsCabinet</defName>
+        <label>sacred tools cabinet</label>
+        <description>Increases work speed when placed near a workbench.</description>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>42</pathCost>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>1800</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <size>(2,1)</size>
+        <costList>
+            <HQC_HolyEssence>100</HQC_HolyEssence>
+            <DankPyon_ComponentBasic>5</DankPyon_ComponentBasic>
+        </costList>
+        <graphicData>
+            <texPath>Things/Building/Misc/ToolCabinet</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,1)</drawSize>
+            <color>(255,255,255)</color>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.35</staticSunShadowHeight>
+        <fillPercent>0.5</fillPercent>
+        <designationCategory>Misc</designationCategory>
+        <canOverlapZones>false</canOverlapZones>
+        <building>
+            <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+        </building>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <WorkTableWorkSpeedFactor>0.25</WorkTableWorkSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+            <li>HQC_DivineRevelation</li>
+        </researchPrerequisites>
     </ThingDef>
 </Defs>
