@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- Holy Essence -->
+    <ThingDef ParentName="ResourceBase">
+        <defName>HQC_HolyEssence</defName>
+        <label>Holy essence</label>
+        <description>A holy metal that can only be found by those worthy of divinity. Normal humans cannot see or find it by any means.</description>
+        <graphicData>
+            <texPath>Things/Items/HolyEssence</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>2</glowRadius>
+                <glowColor>(255,255,255)</glowColor>
+            </li>
+        </comps>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>100</MarketValue>
+            <RoyalFavorValue>0.1</RoyalFavorValue>
+            <Mass>0.25</Mass>
+            <StuffPower_Armor_Sharp>25</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>25</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>25</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>100</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>100</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>5</SharpDamageMultiplier>
+            <BluntDamageMultiplier>5</BluntDamageMultiplier>
+            <ShootingAccuracyTurret>5</ShootingAccuracyTurret>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+                <li>Fabric</li>
+                <li>Leathery</li>
+                <li>Woody</li>
+                <li>Stony</li>
+            </categories>
+            <statOffsets>
+                <Beauty>25</Beauty>
+                <Cleanliness>0.5</Cleanliness>
+                <Comfort>1</Comfort>
+            </statOffsets>
+            <appearance>Metal</appearance>
+            <commonality>0.01</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(255,255,255)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <Flammability>0</Flammability>
+                <MaxHitPoints>100</MaxHitPoints>
+                <Mass>0.25</Mass>
+                <Beauty>25</Beauty>
+                <FilthMultiplier>0</FilthMultiplier>
+                <WorkToMake>2.5</WorkToMake>
+                <WorkToBuild>2.5</WorkToBuild>
+                <DoorOpenSpeed>5</DoorOpenSpeed>
+                <TrapMeleeDamage>5</TrapMeleeDamage>
+                <SurgerySuccessChanceFactor>5</SurgerySuccessChanceFactor>
+                <MedicalTendQualityOffset>5</MedicalTendQualityOffset>
+                <WorkTableWorkSpeedFactor>5</WorkTableWorkSpeedFactor>
+                <ResearchSpeedFactor>5</ResearchSpeedFactor>
+                <MeditationFocusStrength>5</MeditationFocusStrength>
+                <JoyGainFactor>5</JoyGainFactor>
+                <BedRestEffectiveness>5</BedRestEffectiveness>
+                <MeleeWeapon_CooldownMultiplier>2.5</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+        </stuffProps>
+    </ThingDef>
+</Defs>

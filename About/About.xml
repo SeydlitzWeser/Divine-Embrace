@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+    <name>Divine Embrace</name>
+    <author>﴾HMCS Québec﴿</author>
+    <url></url>
+    <description>
+        This mod started as something just for myself, but turned into a bigger project that I wanted to share to those who it'd appeal to.
+
+        [h1]Cosmic Reverence[/h1]
+        Cosmic Reverence is, to be frank, an extremely overpowered mod that adds a multi-purpose material, an infinite chemreactor-like building that produces it,
+        bionics that cover every body parts and organs, a workbench to make them and two power generators. There is also a universal tool cabinet. Everything is
+        unlocked after a veeery long research project.
+
+        [h2] Full list of featured things:[/h2]
+        [list]
+        [h3][*]Research project:[/h3] Celestial manipulation. Has 100k research points for balance.
+        [h3][*]Material:[/h3] Crimson nebulite. Counts as Stone, Wood, Metal and Cloth.
+        [h3][*]Nebulous Condenser:[/h3] Building that generates 25 crimson nebulite every 10 days.
+        [h3][*]Celestial Bionics:[/h3] A full suite of bionics, with some having special properties.
+        [h3][*]Cosmic Forge:[/h3] The workbench which allows crafting those bionics. It's powered by a supernova similar to the power generators, but on a smaller scale.
+        [h3][*]Nova Generator:[/h3] Produces 25k power at the risk of causing an explosion bigger than an anti-grain warhead if damaged.
+        [h3][*]Portable Nova Generator:[/h3] A smaller version of the Nova Generator that produces 5k power with a risk of causing a smaller but still devastating explosion if damaged.
+        [h3][*]Cosmic Cabinet:[/h3] A universal tool cabinet that provides a substantial work speed buff.
+        [/list]
+    </description>
+    <modIconPath IgnoreIfNoMatchingField="true">UI/DELogo</modIconPath>
+    <packageId>hqc.divineembrace</packageId>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>oskarpotocki.vanillafactionsexpanded.core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+            <downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
+        </li>
+        <li>
+            <packageId>dankpyon.medieval.overhaul</packageId>
+            <displayName>Medieval Overhaul</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3219596926</steamWorkshopUrl>
+            <downloadUrl></downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Ludeon.RimWorld</li>
+        <li>Ludeon.RimWorld.Royalty</li>
+        <li>Ludeon.RimWorld.Ideology</li>
+        <li>Ludeon.RimWorld.Biotech</li>
+        <li>Ludeon.RimWorld.Anomaly</li>
+        <li>Ludeon.RimWorld.Odyssey</li>
+        <li>oskarpotocki.vanillafactionsexpanded.core</li>
+        <li>dankpyon.medieval.overhaul</li>
+        <li>mrkociak.yabembionicmodularity</li>
+    </loadAfter>
+    <incompatibleWith>
+    </incompatibleWith>
+</ModMetaData>

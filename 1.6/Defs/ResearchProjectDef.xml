@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>HQC_DivineRevelation</defName>
+        <label>divine revelation</label>
+        <description>Unlocks the ability to find holy essence and making almost anything out of it.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Medieval</techLevel>
+        <tab>DankPyon_MedievalResearchTab</tab>
+        <prerequisites>
+            <li>DankPyon_Engineering</li>
+        </prerequisites>
+        <hiddenPrerequisites>
+            <li>DankPyon_Alchemy</li>
+        </hiddenPrerequisites>
+        <requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>HQC_SanctifiedScripture</li>
+        </requiredResearchFacilities>
+        <researchViewX>12</researchViewX>
+        <researchViewY>1.8</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>HQC_Apotheosis</defName>
+        <label>apotheosis</label>
+        <description>Unlocks the ability to transform a colonist into a divine being.</description>
+        <baseCost>2500</baseCost>
+        <techLevel>Medieval</techLevel>
+        <tab>DankPyon_MedievalResearchTab</tab>
+        <prerequisites>
+            <li>HQC_DivineRevelation</li>
+        </prerequisites>
+        <requiredResearchBuilding>DankPyon_AdvancedResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>HQC_SanctifiedScripture</li>
+        </requiredResearchFacilities>
+        <researchViewX>13</researchViewX>
+        <researchViewY>1.8</researchViewY>
+    </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- divine body parts base -->
+
+    <ThingDef Name="BodyPartDivineBase" ParentName="BodyPartBase" Abstract="True">
+        <techLevel>Medieval</techLevel>
+        <thingCategories>
+            <li>HQC_DivineBodyParts</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <color>(255,255,255)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+        </graphicData>
+        <statBases>
+            <DeteriorationRate>0</DeteriorationRate>
+        </statBases>
+    </ThingDef>
+
+    <!-- apotheosis surgery -->
+
+    <RecipeDef ParentName="SurgeryFlesh">
+        <defName>HQC_ApotheosisSurgery</defName>
+        <label>apotheosis surgery</label>
+        <description>Transform a mortal into a divine being by replacing their entire body with blessed augmentations. An extremely lengthy and dangerous procedure.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineBrain</ThingDef>
+            <HediffDef>HQC_DivineBrain</HediffDef>
+        </descriptionHyperlinks>
+        <workerClass>DivineEmbrace.Recipe_ApotheosisSurgery</workerClass>
+        <jobString>Performing apotheosis surgery.</jobString>
+        <workAmount>15000</workAmount>
+        <hideBodyPartNames>true</hideBodyPartNames>
+        <targetsBodyPart>false</targetsBodyPart>
+        <anesthetize>true</anesthetize>
+        <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+        <deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+        <skillRequirements>
+            <Medicine>15</Medicine>
+        </skillRequirements>
+        <recipeUsers>
+            <li>Human</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>HQC_HolyEssence</li>
+                    </thingDefs>
+                </filter>
+                <count>100</count>
+            </li>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>HQC_DivineBrain</li>
+                <li>HQC_DivineEar</li>
+                <li>HQC_DivineEye</li>
+                <li>HQC_DivineNose</li>
+                <li>HQC_DivineJaw</li>
+                <li>HQC_DivineHeart</li>
+                <li>HQC_DivineLung</li>
+                <li>HQC_DivineStomach</li>
+                <li>HQC_DivineKidney</li>
+                <li>HQC_DivineLiver</li>
+                <li>HQC_DivineArm</li>
+                <li>HQC_DivineSpine</li>
+                <li>HQC_DivinePelvis</li>
+                <li>HQC_DivineLeg</li>
+                <li>HQC_DivineSkin</li>
+                <li>HQC_HolyEssence</li>
+            </thingDefs>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <researchPrerequisites>
+            <li>HQC_Apotheosis</li>
+        </researchPrerequisites>
+    </RecipeDef>
+
+    <!-- divine brain -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineBrain</defName>
+        <label>divine brain</label>
+        <labelNoun>a divine brain</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A brain augmented through the apotheosis surgery. It provides greatly enhanced cognitive functions and mental resilience.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineBrain</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineBrain</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.25</MentalBreakThreshold>
+                    <GlobalLearningFactor>25</GlobalLearningFactor>
+                    <LearningRateFactor>25</LearningRateFactor>
+                    <PsychicSensitivity>1.25</PsychicSensitivity>
+                </statOffsets>
+                <statFactors>
+                    <PsychicEntropyMax>1.25</PsychicEntropyMax>
+                    <PsychicEntropyRecoveryRate>1.25</PsychicEntropyRecoveryRate>
+                    <MeditationFocusGain>1.25</MeditationFocusGain>
+                </statFactors>
+                <painFactor>0.25</painFactor>
+                <restFallFactor>0.25</restFallFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineBrain</defName>
+        <label>divine brain</label>
+        <description>A brain removed from a divine being. It provides greatly enhanced cognitive functions and mental resilience.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>25000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine ear -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineEar</defName>
+        <label>divine ear</label>
+        <labelNoun>divine ear</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>An ear augemnted through the apotheosis surgery. As a pair, they provide enhanced hearing capabilities far beyond natural limits.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineEar</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineEar</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineEar</defName>
+        <label>divine ear</label>
+        <description>An ear removed from a divine being. As a pair, they provide enhanced hearing capabilities far beyond natural limits.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine eye -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineEye</defName>
+        <label>divine eye</label>
+        <labelNoun>a divine eye</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>An eye augmented through the apotheosis surgery. Ranged capacities are greater and it allows for better vision in the dark.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineEye</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineEye</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>2.5</ShootingAccuracyPawn>
+                    <ShootingAccuracyIndoorsDarkOffset>1.25</ShootingAccuracyIndoorsDarkOffset>
+                    <ShootingAccuracyOutdoorsDarkOffset>1.25</ShootingAccuracyOutdoorsDarkOffset>
+                    <ShootingAccuracyFactor_Touch>0.25</ShootingAccuracyFactor_Touch>
+                    <ShootingAccuracyFactor_Short>0.50</ShootingAccuracyFactor_Short>
+                    <ShootingAccuracyFactor_Medium>0.75</ShootingAccuracyFactor_Medium>
+                    <ShootingAccuracyFactor_Long>1</ShootingAccuracyFactor_Long>
+                    <MeleeHitChance>2.5</MeleeHitChance>
+                    <MeleeHitChanceIndoorsDarkOffset>1.25</MeleeHitChanceIndoorsDarkOffset>
+                    <MeleeHitChanceOutdoorsDarkOffset>1.25</MeleeHitChanceOutdoorsDarkOffset>
+                    <MeleeDodgeChanceIndoorsDarkOffset>1.25</MeleeDodgeChanceIndoorsDarkOffset>
+                    <MeleeDodgeChanceOutdoorsDarkOffset>1.25</MeleeDodgeChanceOutdoorsDarkOffset>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineEye</defName>
+        <label>divine eye</label>
+        <description>An eye removed from a divine being. Ranged capacities are greater and it allows for better vision in the dark.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine nose -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineNose</defName>
+        <label>divine nose</label>
+        <labelNoun>a divine nose</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A nose augmented through the apotheosis surgery. The enhanced smelling provided by this bionic allows better cooking and reduces the chance that meals get ruined.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineNose</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineNose</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CookSpeed>12.5</CookSpeed>
+                    <DrugCookingSpeed>2.5</DrugCookingSpeed>
+                </statOffsets>
+                <statFactors>
+                    <FoodPoisonChance>0.05</FoodPoisonChance>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineNose</defName>
+        <label>divine nose</label>
+        <description>A nose removed from a divine being. The enhanced smelling provided by this bionic allows better cooking and reduces the chance that meals get ruined.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine jaw -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineJaw</defName>
+        <label>divine jaw</label>
+        <labelNoun>a divine jaw</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A jaw augmented through the apotheosis surgery. As it greatly increases talking ability, this jaw gives better trading and wardening capacities. For the more Don Juan people, better elocution means better seduction.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineJaw</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineJaw</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <SocialImpact>2.5</SocialImpact>
+                    <ConversionPower>2.5</ConversionPower>
+                    <TradePriceImprovement>2.5</TradePriceImprovement>
+                    <NegotiationAbility>2.5</NegotiationAbility>
+                    <ArrestSuccessChance>2.5</ArrestSuccessChance>
+                    <SuppressionPower>2.5</SuppressionPower>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineJaw</defName>
+        <label>divine jaw</label>
+        <description>A jaw removed from a divine being. As it greatly increases talking ability, this jaw gives better trading and wardening capacities. For the more Don Juan people, better elocution means better seduction.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine heart -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineHeart</defName>
+        <label>divine heart</label>
+        <labelNoun>a divine heart</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A heart augmented through the apotheosis surgery. The amplified blood pumping makes blood circulate much faster and the nano-infused blood cells made by this heart allow wounds to close extremely fast.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineHeart</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineHeart</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <regeneration>2500</regeneration>
+                <showRegenerationStat>false</showRegenerationStat>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineHeart</defName>
+        <label>divine heart</label>
+        <description>A heart removed from a divine being. The amplified blood pumping makes blood circulate much faster and the nano-infused blood cells made by this heart allow wounds to close extremely fast.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine lung -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineLung</defName>
+        <label>divine lung</label>
+        <labelNoun>divine lung</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A lung augmented through the apotheosis surgery. It greatly enhances respiratory efficiency and offer better protection to toxic environments.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineLung</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineLung</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ToxicEnvironmentResistance>2.5</ToxicEnvironmentResistance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineLung</defName>
+        <label>divine lung</label>
+        <description>A lung removed from a divine being. It greatly enhances respiratory efficiency and offer better protection to toxic environments.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine stomach -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineStomach</defName>
+        <label>divine stomach</label>
+        <labelNoun>a divine stomach</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A stomach augmented through the apotheosis surgery. Its strengthened digestion efficiency allows for nutrients absorbed to fullfil hunger for much longer, while also protecting from food poisoning.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineStomach</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineStomach</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+                <hungerRateFactor>0.01</hungerRateFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineStomach</defName>
+        <label>divine stomach</label>
+        <description>A stomach removed from a divine being. Its strengthened digestion efficiency allows for nutrients absorbed to fullfil hunger for much longer, while also protecting from food poisoning.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine kidney -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineKidney</defName>
+        <label>divine kidney</label>
+        <labelNoun>a divine kidney</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A kidney augmented through the apotheosis surgery. It enhances immunity gain better than regular kidneys.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineKidney</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineKidney</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineKidney</defName>
+        <label>divine kidney</label>
+        <description>A kidney removed from a divine being. It enhances immunity gain better than regular kidneys.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine liver-->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineLiver</defName>
+        <label>divine liver</label>
+        <labelNoun>a divine liver</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A liver augmented through the apotheosis surgery.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineLiver</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineLiver</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineLiver</defName>
+        <label>divine liver</label>
+        <description>A liver removed from a divine being.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine arm-->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineArm</defName>
+        <label>divine arm</label>
+        <labelNoun>a divine arm</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>An arm augmented through the apotheosis surgery. It enhances strength and dexterity, allowing greater carrying capacity and faster melee.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineArm</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineArm</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeCooldownFactor>-0.25</MeleeCooldownFactor>
+                </statOffsets>
+                <statFactors>
+                    <CarryingCapacity>1.25</CarryingCapacity>
+                    <VEF_MassCarryCapacity>1.25</VEF_MassCarryCapacity>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineArm</defName>
+        <label>divine arm</label>
+        <description>An arm removed from a divine being. It enhances strength and dexterity, allowing greater carrying capacity and faster melee.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine spine -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineSpine</defName>
+        <label>divine spine</label>
+        <labelNoun>a divine spine</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A spine augmented through the apotheosis surgery. It enhances overall body strength and movmement capacity.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineSpine</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineSpine</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineSpine</defName>
+        <label>divine spine</label>
+        <description>A spine removed from a divine being. It enhances overall body strength and movement capacity.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine pelvis-->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivinePelvis</defName>
+        <label>divine pelvis</label>
+        <labelNoun>a divine pelvis</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A pelvis augmented through the apotheosis surgery. It enhances lower body strength and stability.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivinePelvis</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivinePelvis</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivinePelvis</defName>
+        <label>divine pelvis</label>
+        <description>A pelvis removed from a divine being. It enhances lower body strength and stability.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine leg -->
+
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>HQC_DivineLeg</defName>
+        <label>divine leg</label>
+        <labelNoun>a divine leg</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A leg augmented through the apotheosis surgery. The lighter legs allow for rapid moving and reduces the chance of triggered traps laid out by enemies.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineLeg</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>HQC_DivineLeg</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>2.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeDodgeChance>12.5</MeleeDodgeChance>
+                </statOffsets>
+                <statFactors>
+                    <PawnTrapSpringChance>0.125</PawnTrapSpringChance>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineLeg</defName>
+        <label>divine leg</label>
+        <description>A leg removed from a divine being. The lighter legs allow for rapid moving and reduces the chance of triggered traps laid out by enemies.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+    </ThingDef>
+
+    <!-- divine skin -->
+
+    <HediffDef>
+        <defName>HQC_DivineSkin</defName>
+        <hediffClass>Hediff</hediffClass>
+        <label>divine skin</label>
+        <labelNoun>divine skin</labelNoun>
+        <defaultLabelColor>(255,220,115)</defaultLabelColor>
+        <description>A skin coating applied when the apotheosis surgery. It greatly enhances durability and resistance to damage along with making the pawn more beautiful.</description>
+        <descriptionHyperlinks>
+            <ThingDef>HQC_DivineSkin</ThingDef>
+        </descriptionHyperlinks>
+        <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+        <isBad>false</isBad>
+        <priceImpact>true</priceImpact>
+        <initialSeverity>1</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+                    <ArmorRating_Heat>1.25</ArmorRating_Heat>
+                    <PawnBeauty>2.5</PawnBeauty>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartDivineBase">
+        <defName>HQC_DivineSkin</defName>
+        <label>divine skin</label>
+        <description>A skin coating removed from a divine being and made malleable again. It greatly enhances durability and resistance to damage along with making the pawn more beautiful.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>HQC_ApotheosisSurgery</RecipeDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <MarketValue>50000</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+    </ThingDef>
+</Defs>

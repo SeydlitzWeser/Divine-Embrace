@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>HQC_SanctifiedScripture</defName>
+        <label>sanctified scripture</label>
+        <description>Sacred texts holding the truth behind divine powers. Reading them grants divine enlightenment.</description>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <statBases>
+            <MarketValue>2500</MarketValue>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>60</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <thingCategories>
+            <li>BuildingsMisc</li>
+        </thingCategories>
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <size>(1,1)</size>
+        <uiIconScale>0.8</uiIconScale>
+        <graphicData>
+            <texPath>Things/Buildings/HQC_SanctifiedScripture</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <rotatable>false</rotatable>
+        <canOverlapZones>false</canOverlapZones>
+        <costList>
+            <WoodLog>100</WoodLog>
+            <Steel>15</Steel>
+            <Gold>10</Gold>
+            <DankPyon_ComponentBasic>5</DankPyon_ComponentBasic>
+        </costList>
+        <building>
+            <destroySound>BuildingDestroyed_Wood_Small</destroySound>
+        </building>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <ResearchSpeedFactor>0.25</ResearchSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+    </ThingDef>
+</Defs>
