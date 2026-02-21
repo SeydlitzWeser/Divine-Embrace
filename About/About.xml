@@ -4,23 +4,17 @@
     <author>﴾HMCS Québec﴿</author>
     <url></url>
     <description>
-        This mod started as something just for myself, but turned into a bigger project that I wanted to share to those who it'd appeal to.
-
-        [h1]Cosmic Reverence[/h1]
-        Cosmic Reverence is, to be frank, an extremely overpowered mod that adds a multi-purpose material, an infinite chemreactor-like building that produces it,
-        bionics that cover every body parts and organs, a workbench to make them and two power generators. There is also a universal tool cabinet. Everything is
-        unlocked after a veeery long research project.
+        [h1]Divine Embrace[/h1]
+        Divine Embrace is an overpowered mod that adds a multi-purpose material, bionics that cover every body parts and organs, a building to unlock researches and a veratile tool cabinet.
+        Everything is unlocked after finding the research building and researching the appropriate research projects.
 
         [h2] Full list of featured things:[/h2]
         [list]
-        [h3][*]Research project:[/h3] Celestial manipulation. Has 100k research points for balance.
-        [h3][*]Material:[/h3] Crimson nebulite. Counts as Stone, Wood, Metal and Cloth.
-        [h3][*]Nebulous Condenser:[/h3] Building that generates 25 crimson nebulite every 10 days.
-        [h3][*]Celestial Bionics:[/h3] A full suite of bionics, with some having special properties.
-        [h3][*]Cosmic Forge:[/h3] The workbench which allows crafting those bionics. It's powered by a supernova similar to the power generators, but on a smaller scale.
-        [h3][*]Nova Generator:[/h3] Produces 25k power at the risk of causing an explosion bigger than an anti-grain warhead if damaged.
-        [h3][*]Portable Nova Generator:[/h3] A smaller version of the Nova Generator that produces 5k power with a risk of causing a smaller but still devastating explosion if damaged.
-        [h3][*]Cosmic Cabinet:[/h3] A universal tool cabinet that provides a substantial work speed buff.
+        [h3][*]Research projects:[/h3] - Divine Revelation: Can only be worked on with the Sanctified Scripture linked to an Advanced Research Bench. \n - Apotheosis: Same condition as Divine Revelation. Unlocks the bionics.
+        [h3][*]Material:[/h3] - Holy essence. Counts as Stone, Wood, Metal and Cloth. Can be mined from the Medieval Overhaul Mine Shaft after unlocking Divine Revelation.
+        [h3][*]Divine bionics:[/h3] - A full suite of bionics, with some having special properties.
+        [h3][*]Sanctified scripture:[/h3] - A research building only found in quests that unlocks the Divine Revelation research.
+        [h3][*]Holy tools cabinet:[/h3] - A verstatile tool cabinet that provides a substantial work speed buff.
         [/list]
     </description>
     <modIconPath IgnoreIfNoMatchingField="true">UI/DELogo</modIconPath>
@@ -51,7 +45,6 @@
         <li>Ludeon.RimWorld.Odyssey</li>
         <li>oskarpotocki.vanillafactionsexpanded.core</li>
         <li>dankpyon.medieval.overhaul</li>
-        <li>mrkociak.yabembionicmodularity</li>
     </loadAfter>
     <incompatibleWith>
     </incompatibleWith>

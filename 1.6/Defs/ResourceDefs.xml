@@ -4,7 +4,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>HQC_HolyEssence</defName>
         <label>Holy essence</label>
-        <description>A holy metal that can only be found by those worthy of divinity. Normal humans cannot see or find it by any means.</description>
+        <description>A holy metal that can only be found by those worthy of divinity. Humans unworthy cannot see or find it by any means.</description>
         <graphicData>
             <texPath>Things/Items/HolyEssence</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
