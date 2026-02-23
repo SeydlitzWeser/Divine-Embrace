@@ -2,7 +2,6 @@
 <Defs>
 
     <!-- divine body parts base -->
-
     <ThingDef Name="BodyPartDivineBase" ParentName="BodyPartBase" Abstract="True">
         <techLevel>Medieval</techLevel>
         <thingCategories>
